@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<style>
+    h1 {
+        font-family: Verdana;
+    }
+    body {
+            background-color: #004761;
+            overflow: hidden; /* Prevent scrolling while loading */
+        }
+        h1, p {
+            font-family: Verdana;
+        }
+        .topnav {
+            position: relative;
+            z-index: 1; /* Ensure the navbar is above the loading icon */
+        }
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10; /* Ensure loading icon is above other elements */
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Hide the loading icon when the page is loaded */
+        .loaded .loading {
+            display: none;
+        }
+</style>
+<body style="background-color: #004761;">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <input type="text" placeholder="Search...">
+      </div>
+      <h1 style="text-align: center; color: white;">Contact us</h1>
+
+      <script>
+        // Wait for the window to load
+        window.onload = function() {
+            // Remove the loading class from the body
+            document.body.classList.add('loaded');
+        };
+    </script>
+</body>
+</html>
